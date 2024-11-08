@@ -14,7 +14,7 @@ export default function Home() {
   function handleClicked1() {
     setShow(!show);
   }
-
+  const limit = sculptureList.length;
   const sculptureData = sculptureList[counter];
   return (
     <>
@@ -35,8 +35,8 @@ export default function Home() {
           >
             Next
           </Button>
-
-          <Typography>{sculptureData.name}</Typography>
+          <Typography>{sculptureData.name}</Typography>({counter + 1} out of{" "}
+          {limit})
           <Button
             onClick={handleClicked1}
             sx={{ width: 300, backgroundColor: "#bdbdbd" }}
@@ -45,7 +45,6 @@ export default function Home() {
           >
             {!show ? "Show details" : "Hide details"}
           </Button>
-
           <Typography sx={{ width: 300, fontSize: 12 }}>
             {show && `${sculptureData.description}`}
           </Typography>
