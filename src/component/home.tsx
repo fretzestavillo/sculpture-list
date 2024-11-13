@@ -6,9 +6,11 @@ import { useState } from "react";
 export default function Home() {
   let [counter, setCounter] = useState(0);
   let [show, setShow] = useState(false);
+  let [bgColour, setbgColour] = useState("#424242");
 
   function handleClicked() {
     counter === 11 ? setCounter((counter = 0)) : setCounter((counter += 1));
+    setbgColour((bgColour = bgColour === "#424242" ? "#795548" : "#424242"));
   }
 
   function handleClicked1() {
@@ -22,7 +24,7 @@ export default function Home() {
         <Stack
           sx={{
             padding: 10,
-            backgroundColor: "#424242",
+            backgroundColor: bgColour,
             gap: 5,
             height: "100vh",
           }}
