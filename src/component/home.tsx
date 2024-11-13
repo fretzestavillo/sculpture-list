@@ -10,7 +10,8 @@ export default function Home() {
 
   function handleClicked() {
     counter === 11 ? setCounter((counter = 0)) : setCounter((counter += 1));
-    setbgColour((bgColour = bgColour === "#424242" ? "#795548" : "#424242"));
+    setbgColour((bgColour = bgColour === "#424242" ? "#64ffda" : "#424242"));
+    // setbgColour((bgColour = bgColour === "#424242" ? "#795548" : "#424242"));
   }
 
   function handleClicked1() {
